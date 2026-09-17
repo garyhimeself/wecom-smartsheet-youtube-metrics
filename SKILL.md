@@ -13,6 +13,10 @@ Use this Skill only for public YouTube video metrics in an explicitly identified
 - `YOUTUBE_API_KEY` exists only in the local environment or untracked `.env`.
 - The user provides the SmartSheet link in the current request and identifies the target subtable if the document has more than one data subtable.
 
+## First-time local setup
+
+When the user asks to initialize the Skill on Windows, run `scripts/setup-local-config.ps1`. It opens a masked local dialog for the YouTube API Key; the user pastes it and presses Enter. The script creates the ignored `.env` file beside this Skill. Never ask the user to paste the Key into chat or to locate/edit `.env` manually.
+
 ## Required workflow
 
 1. Read the SmartSheet's subtables, then the target fields and only the required rows. Do not infer field names.

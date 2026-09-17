@@ -23,15 +23,15 @@
    ```
 
 3. 在 Google Cloud 项目中启用 YouTube Data API v3，并创建 API Key。
-4. 复制 `.env.example` 为 `.env`，在本机填写 API Key：
+4. 不需要手动寻找或创建 `.env`。在 Skill 文件夹中运行：
 
-   ```text
-   YOUTUBE_API_KEY=
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File scripts\setup-local-config.ps1
    ```
 
-   在等号后仅填写你本机的真实 Key；不要把该文件发给任何人。
+   会出现一个本地密码遮罩弹窗。粘贴 Key 后按 Enter 或点击“保存”；脚本会自动创建本机 `.env`。如果已有配置，弹窗会要求再次确认才会替换。
 
-5. 不要将 `.env` 发给任何人或上传到 GitHub。
+5. 不要将自动生成的 `.env` 发给任何人或上传到 GitHub。
 
 ## 表格准备
 
